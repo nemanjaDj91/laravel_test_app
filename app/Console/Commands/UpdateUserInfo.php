@@ -32,7 +32,7 @@ class UpdateUserInfo extends Command
         User::all()->each(function ($user) use ($timezones) {
             $user->firstname = Str::random(6);
             $user->lastname = Str::random(8);
-            $user->timezone = $timezones[array_rand($timezones)];
+            $user->time_zone = $timezones[array_rand($timezones)];
             $user->save();
         });
 

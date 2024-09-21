@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-
         Schema::table('users', function (Blueprint $table) {
-            /**
-             * additional the timezone column
-             * added as requested on 21. September 2024 ... 
-             * I usually add comments about why some logic is added/refactored due to easier tracking of tasks and maintanence
-             */
-            $table->string('time_zone')->nullable();
+            //
         });
     }
 
@@ -28,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('time_zone');
+            //
         });
     }
 };

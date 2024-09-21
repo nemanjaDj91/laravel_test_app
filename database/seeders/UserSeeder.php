@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     {
         $timezones = ['CET', 'CST', 'GMT+1'];
         User::factory()->count(20)->create()->each(function ($user) use ($timezones) {
-            $user->timezone = $timezones[array_rand($timezones)];
+            $user->time_zone = $timezones[array_rand($timezones)];
             $user->save();
         });
     }
